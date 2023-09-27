@@ -3,6 +3,22 @@ html{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+ul{
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+}
+
+ul > li {
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    text-align: center;
+    border-top: 2px solid silver;
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+
 P{
     padding: 15px;
     border-radius: 10px;

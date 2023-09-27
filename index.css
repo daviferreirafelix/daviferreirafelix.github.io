@@ -1,0 +1,19 @@
+.menu{
+    display: flex;
+}
+
+.menu > li {
+    padding: 10px;
+    margin: 10px;
+    text-decoration: none;
+    text-align: center;
+    list-style-type: none;
+    background-color: grey;
+    color: white;
+}
+
+@media only screen and (max-width: 900px){
+    .menu{
+        display: block;
+    }
+}
