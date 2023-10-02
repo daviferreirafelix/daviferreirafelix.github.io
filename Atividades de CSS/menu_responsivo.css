@@ -1,0 +1,190 @@
+body{
+    margin: 0;
+    color: white;
+
+    /* 
+        Este seletor seleciona todo o corpo/body do site, e define pra ele o valor de 0 pro margin, ou seja, todo o site ficará com suas margens zeradas e define o valor da propriedade color como white, ou seja, todas as fontes do site terão a sua coloração branca. 
+    */
+
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    overflow: hidden;
+    transition: all .20s;
+
+    /* 
+        Este é o seletor que seleciona todas as listas não enumeradas do site. Aqui, definimos as seguintes propriedades: 
+    
+        - display recebe o valor flex, ou seja, o elemento passa a manipular seus elementos filhos de forma dinâmica, onde qualquer alteração no tamanho/estrutura do elemento pai, que recebeu a propriedade display:flex, altera de forma dinâmica o layout dos elementos filhos;
+
+        - list-style-type recebe o valor none, e com isso retira qualquer estilização pré alocadas das tags de listas;
+
+        - overflow recebe o valor hidden, portanto ele esconde o conteúdo que ultrapassa o tamanho definido do elemento onde ele está;
+        
+        - transition recebe all e .20s, ou seja, a mudança de forma do elemento passrá a ter uma transição mais suave, o all define que todas as propriedades dentro de ul serão afetadas por essa transição, já o .20s define o tempo de duração, em milissegundos, dessa transição;
+    */
+
+}
+
+li{
+    padding: 10px;
+
+    /*
+        Este é o seletor que seleciona todos os itens das listas numeradas ou não numeradas do site. Aqui ele possui a propriedade padding, que define um espaçamento interno do elemento até a sua própria borda, em todas as 4 direções, e o 10px se refere ao tamanho deste espaçamento.
+    */
+}
+
+nav{
+    display: flex;
+    background-color: black;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: center;
+
+    /*
+        Este é o seletor que seleciona o espaço do menu principal do site. Aqui, ele recebe as seguintes propriedades: 
+
+        - display recebe o valor flex,
+            ou seja,
+            o elemento passa a manipular seus elementos filhos de forma dinâmica,
+            onde qualquer alteração no tamanho/estrutura do elemento pai,
+            que recebeu a propriedade display: flex, altera de forma dinâmica o layout dos elementos filhos;
+        
+            - background-color: black;, que define a cor de fundo deste elemento/espaço como preto;
+        
+            - padding: 0 20px, que define o espaçamento do elemento até sua própria borda, neste caso está defini que entre as bordas de cima e de baixo não haverá espaçamento, pois recebe o valor 0, já as bordas laterais terão um espaçamento de 20px;
+        
+            - justify-content: space-between, é uma propriedade advinda do display:flex, ela permite o alinhamento horizontal do elementos dentro do espaço, o valor space-between determina que esse alinhamento irá ser da mesma medida entre todos os elementos, ocupando todo o espaço disponível, de uma ponta a outra, do elemento pai;
+
+            - align-itens: center, também vem do display:flex, ela determina o alinhamento vertical dos elementos filhos, onde o valor center os alinham especificamente ao centro do espaço do elemento pai;
+    */
+}
+
+button{
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+
+
+    /*
+        Este é o seletor que seleciona os botões do site. Aqui, ele recebe as seguintes propriedades: 
+
+            - display recebe o valor none, ou seja, ele será excluído da exibição na tela do usuário;
+        
+            - background-color: transparent;, que define a cor de fundo deste elemento/espaço como transparente;
+        
+            - border: none; define que não haverá bordas no elemento;
+        
+            - color: #fff; define que a cor do elemento será branca;
+
+            - position: absolute; determina o posicionamento do elemento na página, sendo usado junto das propriedades top e right, onde top: 10px; indica que o elemento ficará a 10px de distância do topo da página e right: 10px; determina que o elemento ficará a 10px de distância do lado direito da página;
+
+            - font-size: 16px; determina o tamanho da fonte do elemento em 16px;
+        */
+}
+ 
+li:hover, 
+h1:hover, 
+button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+
+
+    /*
+        Estes são os seletores que selecionam os botões, titulos principais e itens de lista do site. Aqui, ele recebe também o seletor especial :hover, que atribui um estilo/comportamento ao elemento quando o cursor do mouse estiver por cima. Ele possui as seguintes propriedades: 
+
+            - cursor: pointer; determina o formato de mãozinha ao cursor;
+        
+            - opacity: 0.8; determina uma opacidade do elemento de 0.1 até 1, sendo dado um valor de 0.8 neste caso;
+        
+            - background-color: rgba(255, 255, 255, 0.2); determina uma coloração de fundo com base em cor e transparência, onde a cor atribuída foi a branca com uma opacidade de 0.2; 
+        
+            - border-radius: 30px; determina o raio de curvatura das pontas da borda, neste caso é de 30px;
+    */
+}
+
+button:focus ~ul{
+    height: 325px;
+
+
+    /* 
+        Este seletor seleciona todos os botões do site e vem junto do seletor especial :focus, que atribui um comportamento/estilo ao elemento quando o mesmo for focado, além de vir seguido com o operador ~ul, onde, nesta sintaxe, está determinado que o comportamento ao entrar em foco será para todo ul precedido de button. Neste caso, a única propriedade é height: 325px; onde está determinada uma altura de 325px ao elemento.
+    */
+}
+
+@media (max-width: 700px){
+    /* 
+        O operador @media determina que virão, dentro de suas chaves, estilos específicos para o tamanho de tela atribuiído dentro do parêntese.
+    */
+
+
+    nav, ul{
+        flex-direction: column;
+
+
+        /* 
+            É seleciondo todos os menus principais e listas não ordenadas do site, dando a eles a propriedade flex-direction: column; significando que todos os elementos filhos destes elementos selecionados serão organizados de forma flexível e em coluna;
+        */
+    }
+
+    ul{
+        text-align: center;
+        margin: 0;
+        height: 0;
+
+
+        /* 
+            É seleciondo todas as listas não ordenadas do site, e dado a ela as seguintes propriedades: 
+
+            - text-align: center; determina que todo o texto será alinhado ao centro;
+
+            - margin: 0; e height: 0; determina que toda a margem e altura serão 0;
+        */
+    }
+
+    nav{
+        padding-top: 0;
+        align-items: flex-start;
+
+
+        /* 
+            É o seletor que seleciona todos os menus principais do site, aqui ele recebe as propriedades padding-top: 0;, que determina a distância entre o elemento e sua própria borda superior em 0 e align-items: flex-start; que alinha todos os itens filhos dela que forma vertical e flexível no topo/começo do elemento;
+        */
+    }
+
+    h1{
+        margin: 10px;
+
+
+        /* 
+            É o seletor que seleciona todos os títutlos principais do site, nele está dado a propriedade margin: 10px, que determina uma distância, nas 4 direções, dele mesmo para qualquer outro elemento por perto;
+        */
+    }
+
+    button{
+        display: flex;
+
+
+        /* 
+            É o seletor que seleciona todos os botões do site e dá apenas o atributo de display: flex; para o mesmo, determinando que o seu comportamento será de forma flexxível em relação ao layout;    
+        */
+    }
+
+    li, ul{
+        width: 100vw;
+
+
+        /* 
+            Seleciona todas as listas não ordenadas e elementos de listas da página, e dá a eles o atributo width: 100vw;, onde determina que a largura do elemento alcançará 100% da view port, ou seja, 100% da tela;
+        */
+    }
+}
