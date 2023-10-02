@@ -3,3 +3,11 @@ body{
     background-image: url("../img/angular.jpg");   
     background-size: cover;
 }
+
+a:visited{
+    color: white;
+}
+
+a{
+    color: white;
+}
