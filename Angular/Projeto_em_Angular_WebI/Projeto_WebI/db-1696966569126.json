@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "name": "Bob",
+      "job": "desempregado",
+      "age": 32,
+      "location": "Estados Unidos"
+    },
+    {
+      "name": "Maria",
+      "job": "programadora",
+      "age": 25,
+      "location": "Brasil"
+    },
+    {
+      "name": "Mariano",
+      "job": "empresário",
+      "age": 44,
+      "location": "Espanha"
+    },
+    {
+      "name": "Josefa",
+      "job": "aposentada",
+      "age": 77,
+      "location": "Portugal"
+    },
+    {
+      "name": "Paul",
+      "job": "cozinheiro",
+      "age": 30,
+      "location": "Franca"
+    }
+  ]
+}

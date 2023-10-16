@@ -1,0 +1,9 @@
+<div class="aulas">
+  <h1 *ngIf="podeMostrar; else naoPodeMostrar">O texto agora é o visível</h1>
+
+  <ng-template #naoPodeMostrar>
+    <h1>O texto agora é o invisível.</h1>
+  </ng-template>
+
+  <app-fazendo-eventos (click)="onClick()"></app-fazendo-eventos>
+</div>
