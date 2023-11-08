@@ -1,8 +1,0 @@
-<div class="aulas">
-  <div *ngIf="podeMostrar === true; else podeMostrarEscondido">Mostrando</div>
-  <ng-template #podeMostrarEscondido>
-    <div>Mostrando texto escondido</div>
-  </ng-template>
-
-  <button (click)="click()">MUDAR TEXTO</button>
-</div>
